@@ -1,4 +1,4 @@
-# pytorch-learning-log
+# Pytorch-learning-log
 Hands-on PyTorch fundamentals — training loops, gradients, hidden layers, and batching — built while preparing for a quantum computing + deep learning internship project.
 
 #PyTorch Learning Log
@@ -25,11 +25,15 @@ using neural networks).
    `TensorDataset` + `DataLoader` for batching, plus a hands-on comparison 
    between SGD and Adam optimizers at different learning rates.
    
-6. **`05_kl_divergence_loss.py`** — KL Divergence loss for comparing probability 
+5. **`05_kl_divergence_loss.py`** — KL Divergence loss for comparing probability 
    distributions, including why PyTorch's `KLDivLoss` requires the predicted 
    distribution's log (not the target's), derived from splitting the KL formula 
    algebraically.
-   
+
+6. **`06_save_load_model.py`** — saving a trained model's weights to disk 
+   with `state_dict()`, and loading them back into a fresh model instance, 
+   confirming no information is lost in the process.
+
 ## Key lessons learned
 
 - Learning rate matters more than optimizer choice alone — a well-tuned 
@@ -56,8 +60,11 @@ using neural networks).
   not the target — this comes from algebraically splitting the KL formula, 
   where only one term actually depends on the predicted distribution `Q`.
 
+- A trained model's weights can be saved and reloaded without any loss of 
+  information, using `state_dict()`, `torch.save()`, and `torch.load()`.
+
 ## Next steps
 
 - Learn Qiskit for building and simulating quantum circuits
 - Apply this same training pattern to real (simulated) noisy quantum data
-
+- Cover train/test split and evaluation before starting the actual project
