@@ -34,6 +34,9 @@ using neural networks).
    with `state_dict()`, and loading them back into a fresh model instance, 
    confirming no information is lost in the process.
 
+7. **`07_train_validation.py`** - divide to train and validatiob dataset to train model
+   to identify correct outputs
+
 ## Key lessons learned
 
 - Learning rate matters more than optimizer choice alone — a well-tuned 
@@ -63,8 +66,12 @@ using neural networks).
 - A trained model's weights can be saved and reloaded without any loss of 
   information, using `state_dict()`, `torch.save()`, and `torch.load()`.
 
+- Training/Validation datasets to model to learn the true mathematical function  instead of
+  memorizing specific inputs (overfitting).
+  
+
 ## Next steps
 
 - Learn Qiskit for building and simulating quantum circuits
 - Apply this same training pattern to real (simulated) noisy quantum data
-- Cover train/test split and evaluation before starting the actual project
+  
